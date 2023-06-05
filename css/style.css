@@ -1,0 +1,74 @@
+@page {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+body {
+    background: azure;
+}
+.atas {
+    font-family: sans-serif;
+    /* border: 1px solid #000; */
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.atas span {
+    cursor: pointer;
+    margin: 0px 5px 0px 0.5px;
+    vertical-align: middle;
+}
+.atas a {
+    cursor: pointer;
+    margin: 0px 5px 0px 0.5px;
+    padding: 2px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+.atas a:hover {
+    color: #bfbfbf;
+    background-color: #2400f3;
+}
+
+.icon-tools {
+    font-family: sans-serif;
+    /* border: 1px solid #000; */
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.icon-tools span {
+    padding: 2px;
+    vertical-align: middle;
+}
+.icon-sm {
+    width: 1%;
+    height: 2.3%;
+}
+.icon-tools span:hover {
+    background-color: #bfbfbf;
+}
+.left-block {
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    width: 40%;
+    min-height: 50%;
+    float: left;
+    margin: 2px 2px 2px 0px;
+}
+.center-block {
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    width: 40%;
+    min-height: 50%;
+    float: left;
+    margin: 2px 2px 2px 0px;
+}
+.right-block {
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    width: 19%;
+    min-height: 50%;
+    float: left;
+    margin: 2px 2px 2px 0px;
+}
