@@ -7,6 +7,16 @@
 body {
     background: azure;
 }
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 9.4488188976px;
+    /* border: 1px solid #bfbfbf; */
+    box-sizing: border-box;
+    /* padding: 5px; */
+    background-repeat: no-repeat;
+    background-position: top;
+}
 .atas {
     font-family: sans-serif;
     /* border: 1px solid #000; */
@@ -54,15 +64,29 @@ body {
     width: 40%;
     min-height: 50%;
     float: left;
-    margin: 2px 2px 2px 0px;
+    margin: 2px 4px 2px 0px;
 }
+.left-title {
+    margin: 5px 5px 0px 5px;
+    border-bottom: 2px solid #201f1f;
+}
+.left-title label {
+    font-size: x-large;
+}
+.left-atas {
+    /* border: 1px solid #201f1f; */
+}
+.left-bawah {
+    border-top: 1px solid #7e7a7a;
+}
+
 .center-block {
     background-color: #fff;
     border: 1px solid #bfbfbf;
     width: 40%;
     min-height: 50%;
     float: left;
-    margin: 2px 2px 2px 0px;
+    margin: 2px 4px 2px 0px;
 }
 .right-block {
     background-color: #fff;
@@ -70,5 +94,93 @@ body {
     width: 19%;
     min-height: 50%;
     float: left;
-    margin: 2px 2px 2px 0px;
+    margin: 2px 3px 2px 0px;
+}
+.output {
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    width: 99.7%;
+    min-height: 20%;
+    float: left;
+    margin-top: 5px;
+}
+
+/* start tabs */
+.container-wrapper {
+	margin:7% auto;
+	position: relative;
+	width: 500px;
+	overflow: hidden;
+}
+
+/* Tab menu styling*/
+input.tab-menu-radio {
+    display: none;
+}
+label.tab-menu {
+    display: inline-block;
+    float: left;
+    padding:10px 30px;
+    cursor: pointer;
+    z-index: 99;
+}
+/* End Tab menu styling*/
+
+/* Tab content styling*/
+
+.tab-content {
+    top:-3px;
+    clear: both;
+    position: relative;
+    padding:10px;
+    overflow-x: auto;
+    min-height: 20%;
+    margin-bottom: 0px;
+}	
+/* End Tab content styling*/
+
+/* CSS tab core */
+    .tab-menu-radio:checked + label {
+        -webkit-transition:all 1s; /* Optional */
+        -moz-transition:all 1s; /* Optional */
+        transition:all 1s; /* Optional */
+        background-color: #333;
+        color: #fff;
+    }
+    .tab-content .tab {
+        height: 0;
+        opacity: 0;
+    }
+    #tab-menu1:checked ~ .tab-content .tab-1,
+    #tab-menu2:checked ~ .tab-content .tab-2 {
+        -webkit-transition:opacity 1s; /* Optional */
+        -moz-transition:opacity 1s; /* Optional */
+        transition:opacity 1s; /* Optional */
+        height: auto;
+        opacity: 1;
+    }
+/* End CSS tab core */
+
+.tab-content-center {
+    top:-3px;
+    clear: both;
+    position: relative;
+    padding:10px;
+    min-height: initial;
+    margin-bottom: 0px;
+}
+.tab-content-center .tab {
+    height: 0;
+    opacity: 0;
+}
+#tab-menu-active:checked ~ .tab-content-center .tab-active,
+#tab-menu-overlay:checked ~ .tab-content-center .tab-overlay,
+#tab-menu-stacked:checked ~ .tab-content-center .tab-stacked {
+    -webkit-transition:opacity 1s; /* Optional */
+    -moz-transition:opacity 1s; /* Optional */
+    transition:opacity 1s; /* Optional */
+    height: auto;
+    opacity: 1;
+    /* border: 1px #333 solid; */
+    margin-top: 0px !important;
 }
