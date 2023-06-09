@@ -72,7 +72,7 @@
                     <h5>Operation Pane</h5>
                 </div>
                 <div class="card-body" style="min-height: 200px;">
-                    this
+                    
                 </div>
                 <div class="card-footer" style="min-height: 100px;">
                     Method Parameters
@@ -83,9 +83,15 @@
             <div class="card">
                 <nav>
                     <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
-                        <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Active</button>
-                        <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" tabindex="-1">Overlay</button>
-                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false" tabindex="-1">Stacked</button>
+                        <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                            <span><img src="css/img/active_icon.PNG" class="icon-tab" alt="Active" title="Active"></span> Active
+                        </button>
+                        <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" tabindex="-1">
+                            <span><img src="css/img/overlay_icon.PNG" class="icon-tab" alt="Overlay" title="Overlay"></span> Overlay
+                        </button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false" tabindex="-1">
+                            <span><img src="css/img/stacked_icon.PNG" class="icon-tab" alt="Stacked" title="Stacked"></span> Stacked
+                        </button>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent" style="min-height: 290px;">
@@ -105,20 +111,36 @@
     <hr>
     <div class="row">
         <div class="col-lg-12">
+            <div class="tab-content" id="nav-tabContent" style="min-height: 100px;">
+                <div class="tab-pane fade active show" id="nav-output" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <p>This Output.</p>
+                </div>
+                <div class="tab-pane fade" id="nav-instrument" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <p>This Instrument History.</p>
+                </div>
+            </div>
             <nav>
                 <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
                     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-output" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Output</button>
                     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-instrument" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" tabindex="-1">Instrument History</button>
                 </div>
             </nav>
-            <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade active show" id="nav-output" role="tabpanel" aria-labelledby="nav-home-tab">
-                  <p>This Output.</p>
-                </div>
-                <div class="tab-pane fade" id="nav-instrument" role="tabpanel" aria-labelledby="nav-profile-tab">
-                  <p>This Instrument History.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="text-center" style="min-height: 100px; border: 0.5px solid #bfbfbf;">
+                <div class="icon-tools">
+                    <span><img src="css/img/cell_blank_icon.PNG" class="icon-main" alt="Cell Blank" title="Cell Blank"></span>
+                    <span><img src="css/img/auto_zero_icon.PNG" class="icon-main" alt="Auto Zero" title="Auto Zero"></span>
+                    <span><img src="css/img/baseline_icon.PNG" class="icon-main" alt="Baseline" title="Baseline"></span>
+                    <span><img src="css/img/gotowl_icon.PNG" class="icon-main" alt="Go To WL" title="Go To WL"></span>
+                    <span><img src="css/img/start_icon.PNG" class="icon-main" alt="Start" title="Start"></span>
+                    <span><img src="css/img/disconnect_icon.PNG" class="icon-main" alt="Disconnect" title="Disconnect"></span>
                 </div>
             </div>
+        </div>
+        <div class="col-lg-6" style="min-height: 100px; border: 0.5px solid #bfbfbf;">
         </div>
     </div>
     

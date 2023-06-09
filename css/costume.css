@@ -38,6 +38,12 @@
 .icon-sm-gabung {
     height: 4%;
 }
+.icon-main {
+    height: 25% !important;
+}
+.icon-tab {
+    height: 40%;
+}
 .icon-tools span:hover {
     background-color: #bfbfbf;
 }
