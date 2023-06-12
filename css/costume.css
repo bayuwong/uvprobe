@@ -47,3 +47,6 @@
 .icon-tools span:hover {
     background-color: #bfbfbf;
 }
+.on-hide {
+    display: none;
+}

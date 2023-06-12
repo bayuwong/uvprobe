@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UVProbe - [Spectrum]</title>
+    <link rel="icon" type="image/x-icon" href="css/img/icon-uvp.PNG">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css.map">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
@@ -70,13 +71,13 @@
         <span><img src="css/img/M_icon.PNG" class="icon-sm-gabung" alt="" title=""></span>
     </div>
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-sm-6 col-lg-6">
             <div class="card">
                 <div class="card-header">
-                    <h5>Operation Pane</h5>
+                    <h5 id="title-operation">Operation Pane</h5>
                 </div>
                 <div class="card-body" style="min-height: 200px;">
-                    
+                    <div id="operation"></div>
                 </div>
                 <div class="card-footer" style="min-height: 100px;">
                     Method Parameters
@@ -85,28 +86,33 @@
                             <div class="mb-3 row">
                                 <div class="col-sm-6">
                                     <label for="start" class="col-form-label">start wavelength:</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input name="" id="" class="form-control form-control-sm">
+                                </div>
+                                <div class="col-sm-6">
                                     <label for="stop" class="col-form-label">stop wavelength:</label>
                                 </div>
                                 <div class="col-sm-6">
-                                    <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                    <input type="text" class="form-control form-control-sm">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-5">
                             <table class="table table-bordered table-condensed table-sm">
                                 <tr>
-                                    <td>Reff Slot</td>
+                                    <td><small>Reff Slot</small></td>
                                     <td>
-                                        <select class="form-select form-select-sm">
+                                        <select class="form-select form-select-sm" id="reff-slot">
                                             <option value="1">methanol</option>
                                             <option value="2">methyl orange</option>
                                           </select>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Samp Slot</td>
+                                    <td><small>Samp Slot</small></td>
                                     <td>
-                                        <select class="form-select form-select-sm">
+                                        <select class="form-select form-select-sm" id="samp-slot">
                                             <option value="1">methanol</option>
                                             <option value="2">methyl orange</option>
                                           </select>
@@ -138,7 +144,7 @@
                       <p>This active.</p>
                     </div>
                     <div class="tab-pane fade active show" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                      <p>This Overlay.</p>
+                      <div id="this-overlay"></div>
                     </div>
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                       <p>This Stacked.</p>
@@ -150,12 +156,12 @@
     <hr>
     <div class="row">
         <div class="col-lg-12">
-            <div class="tab-content" id="nav-tabContent" style="min-height: 100px;">
+            <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade active show" id="nav-output" role="tabpanel" aria-labelledby="nav-home-tab">
-                    <p>This Output.</p>
+                    <p></p>
                 </div>
                 <div class="tab-pane fade" id="nav-instrument" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    <p>This Instrument History.</p>
+                    <p></p>
                 </div>
             </div>
             <nav>
@@ -170,12 +176,13 @@
         <div class="col-lg-6">
             <div class="text-center" style="min-height: 100px; border: 0.5px solid #bfbfbf;">
                 <div class="icon-tools">
-                    <span><img src="css/img/cell_blank_icon.PNG" class="icon-main" alt="Cell Blank" title="Cell Blank"></span>
-                    <span><img src="css/img/auto_zero_icon.PNG" class="icon-main" alt="Auto Zero" title="Auto Zero"></span>
-                    <span><img src="css/img/baseline_icon.PNG" class="icon-main" alt="Baseline" title="Baseline"></span>
-                    <span><img src="css/img/gotowl_icon.PNG" class="icon-main" alt="Go To WL" title="Go To WL"></span>
-                    <span><img src="css/img/start_icon.PNG" class="icon-main" alt="Start" title="Start"></span>
-                    <span><img src="css/img/disconnect_icon.PNG" class="icon-main" alt="Disconnect" title="Disconnect"></span>
+                    <button id="cell-blank" title="Cell Blank" type="button" class="btn btn-outline-secondary on-hide" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; --bs-btn-border-color: #fff;" onClick="window.location.reload();"><img src="css/img/cell_blank_icon.PNG" class="icon-main" alt="Cell Blank" title="Cell Blank"><b>Cell Blank</b></button>
+                    <button id="auto-zero" title="Auto Zero" type="button" class="btn btn-outline-secondary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; --bs-btn-border-color: #fff;"><img src="css/img/auto_zero_icon.PNG" class="icon-main" alt="Auto Zero" title="Auto Zero"><b>Auto Zero</b></button>
+                    <button id="baseline" title="Baseline" type="button" class="btn btn-outline-secondary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; --bs-btn-border-color: #fff;"><img src="css/img/baseline_icon.PNG" class="icon-main" alt="Baseline" title="Baseline"><b>Baseline</b></button>
+                    <button id="gotowl" title="Go To WL" type="button" class="btn btn-outline-secondary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; --bs-btn-border-color: #fff;"><img src="css/img/gotowl_icon.PNG" class="icon-main" alt="Go To WL" title="Go To WL"><b>Go To WL</b></button>
+                    <button id="start" title="Start" type="button" class="btn btn-outline-secondary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; --bs-btn-border-color: #fff;"><img src="css/img/start_icon.PNG" class="icon-main" alt="Start" title="Start"><b>Start</b></button>
+                    <button id="connect" title="Connect" type="button" class="btn btn-outline-secondary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; --bs-btn-border-color: #fff;"><img src="css/img/connect_icon.PNG" class="icon-main" alt="Connect" title="Connect"><b>Connect</b></button>
+                    <button id="disconnect" title="Disconnect" type="button" class="btn btn-outline-secondary on-hide" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; --bs-btn-border-color: #fff;"><img src="css/img/disconnect_icon.PNG" class="icon-main" alt="Disconnect" title="Disconnect"><b>Disconnect</b></button>
                 </div>
             </div>
         </div>
@@ -195,5 +202,8 @@
     <!-- <script src="bootstrap/js/bootstrap.js.map"></script> -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- <script src="bootstrap/js/bootstrap.min.js.map"></script> -->
+    <script src="js/jquery.min.js"></script>
+    <!-- costum -->
+    <script src="js/costum.js"></script>
 </body>
 </html>
