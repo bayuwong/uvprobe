@@ -14,19 +14,19 @@ $(document).ready(function() {
             document.getElementById("operation").innerHTML = '<img src="image/table_spektrum.jpeg">';
         }
         if(1==reff && 1==samp){
-            document.getElementById("operation").innerHTML = '';
+            document.getElementById("operation").innerHTML = '<img src="image/table_methyl.PNG">';
             document.getElementById("title-operation").innerHTML = 'Print';
-            document.getElementById("this-overlay").innerHTML = '';
+            document.getElementById("this-overlay").innerHTML = '<img src="image/chart_methyl.PNG">';
         }
         if(2==reff && 1==samp){
-            document.getElementById("operation").innerHTML = '';
+            document.getElementById("operation").innerHTML = '<img src="image/table_methyl.PNG">';
             document.getElementById("title-operation").innerHTML = 'Print';
-            document.getElementById("this-overlay").innerHTML = '';
+            document.getElementById("this-overlay").innerHTML = '<img src="image/chart_methyl.PNG">';
         }
         if(2==reff && 2==samp){
-            document.getElementById("operation").innerHTML = '';
+            document.getElementById("operation").innerHTML = '<img src="image/table_methyl.PNG">';
             document.getElementById("title-operation").innerHTML = 'Print';
-            document.getElementById("this-overlay").innerHTML = '';
+            document.getElementById("this-overlay").innerHTML = '<img src="image/chart_methyl.PNG">';
         }
     });
 
