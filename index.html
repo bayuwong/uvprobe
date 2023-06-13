@@ -40,6 +40,29 @@
     <link rel="stylesheet" href="css/costume.css">
 </head>
 <body>
+    <script>
+        myInterval = '';
+
+        function blink() {
+            myInterval = setInterval(setBlink, 500);
+        }
+
+        function setBlink() {
+            $('#cell-blank').show();
+            let startl = document.getElementById('start-wavelength-label');
+            let stopl = document.getElementById('stop-wavelength-label');
+            startl.style.visibility = (startl.style.visibility == 'hidden' ? '' : 'hidden');
+            stopl.style.visibility = (stopl.style.visibility == 'hidden' ? '' : 'hidden');
+        }
+
+        function stopBlink() {
+            clearInterval(myInterval);
+            let startl = document.getElementById('start-wavelength-label');
+            let stopl = document.getElementById('stop-wavelength-label');
+            startl.style.visibility = (startl.style.visibility == 'visible' ? '' : 'visible');
+            stopl.style.visibility = (stopl.style.visibility == 'visible' ? '' : 'visible');
+        }
+    </script>
     <div class="atas">
         <span><img src="css/img/icon-uvp.PNG" alt=""></span>
         <a href="#" class="small-hvr">File</a>
@@ -68,7 +91,7 @@
         <span><img src="css/img/rocket_icon.PNG" class="icon-sm-gabung" alt="" title=""></span>
         <!-- <span><img src="css/img/std_smp_icon.PNG" class="icon-sm-gabung" alt="" title=""></span> -->
         <span><img src="css/img/zoom_icon.PNG" class="icon-sm-gabung" alt="" title=""></span>
-        <span id="m"><img src="css/img/M_icon.PNG" class="icon-sm-gabung" alt="" title=""></span>
+        <span id="m"><img onclick="blink()" src="css/img/M_icon.PNG" class="icon-sm-gabung" alt="" title=""></span>
     </div>
     <div class="row">
         <div class="col-sm-6 col-lg-6">
@@ -88,13 +111,13 @@
                                     <label for="start-wavelength" id="start-wavelength-label" class="col-form-label">start wavelength:</label>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" name="start-wavelength" id="start-wavelength" class="form-control form-control-sm">
+                                    <input type="text" onclick="stopBlink()" name="start-wavelength" id="start-wavelength" class="form-control form-control-sm">
                                 </div>
                                 <div class="col-sm-5">
                                     <label for="stop-wavelength" id="stop-wavelength-label" class="col-form-label">stop wavelength:</label>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" name="stop-wavelength" id="stop-wavelength" class="form-control form-control-sm">
+                                    <input type="text" onclick="stopBlink()" name="stop-wavelength" id="stop-wavelength" class="form-control form-control-sm">
                                 </div>
                             </div>
                         </div>
@@ -121,28 +144,6 @@
                                     </select>
                                 </div>
                             </div>
-                            <!-- <table class="table table-condensed table-sm">
-                                <tr>
-                                    <td><small>Reff Slot</small></td>
-                                    <td>
-                                        <select class="form-select form-select-sm" id="reff-slot">
-                                            <option value="">Pilih salah satu</option>
-                                            <option value="1">methanol</option>
-                                            <option value="2">methyl orange</option>
-                                          </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><small>Samp Slot</small></td>
-                                    <td>
-                                        <select class="form-select form-select-sm" id="samp-slot">
-                                            <option value="">Pilih salah satu</option>
-                                            <option value="1">methanol</option>
-                                            <option value="2">methyl orange</option>
-                                          </select>
-                                    </td>
-                                </tr>
-                            </table> -->
                         </div>
                     </div>
                 </div>
