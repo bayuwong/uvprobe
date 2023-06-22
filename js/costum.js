@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     $('#start').click(function() {
-        $('#cell-blank').show();
+        // $('#cell-blank').show();
         document.getElementById("start").disabled = true;
         var title = $(this).attr('title');
         var reff = document.getElementById("reff-slot").value;
@@ -31,13 +31,20 @@ $(document).ready(function() {
     });
 
     $('#reff-slot').change(function() {
-        $('#cell-blank').show();
+        // $('#cell-blank').show();
         $('#start').prop('disabled', false);
     });
 
     $('#samp-slot').change(function() {
-        $('#cell-blank').show();
+        // $('#cell-blank').show();
         $('#start').prop('disabled', false);
     });
 
+    $('#cell-blank').click(function() {
+        console.log('adeh');
+        document.getElementById("operation").innerHTML = '';
+        document.getElementById("title-operation").innerHTML = 'Operation Pane';
+        document.getElementById("this-overlay").innerHTML = '';
+        $('#start').prop('disabled', false);
+    });
 });
