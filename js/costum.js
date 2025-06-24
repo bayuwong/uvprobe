@@ -1,17 +1,17 @@
 $(document).ready(function() {
 
     $('#start').click(function() {
-        // $('#cell-blank').show();
+        $('#cell-blank').show();
         document.getElementById("start").disabled = true;
         var title = $(this).attr('title');
         var reff = document.getElementById("reff-slot").value;
         var samp = document.getElementById("samp-slot").value;
-        // console.log(samp);
+        console.log(reff);
+        console.log(samp);
         if(1==reff && 2==samp){
-            x = "image/chart_spektrum.PNG";
-            document.getElementById("title-operation").innerHTML = 'Print';
-            document.getElementById("this-overlay").innerHTML = '<img src="'+x+'">';
-            document.getElementById("operation").innerHTML = '<img src="image/table_spektrum.jpeg">';
+            document.getElementById("operation").innerHTML = '<img src="image/table_peak_pick.jpg">';
+            document.getElementById("title-operation").innerHTML = 'Peak Pick';
+            document.getElementById("this-overlay").innerHTML = '<img src="image/chart_peak_pick.jpg">';
         }
         if(1==reff && 1==samp){
             document.getElementById("operation").innerHTML = '<img src="image/table_methyl.PNG">';
@@ -31,20 +31,13 @@ $(document).ready(function() {
     });
 
     $('#reff-slot').change(function() {
-        // $('#cell-blank').show();
+        $('#cell-blank').show();
         $('#start').prop('disabled', false);
     });
 
     $('#samp-slot').change(function() {
-        // $('#cell-blank').show();
+        $('#cell-blank').show();
         $('#start').prop('disabled', false);
     });
 
-    $('#cell-blank').click(function() {
-        console.log('adeh');
-        document.getElementById("operation").innerHTML = '';
-        document.getElementById("title-operation").innerHTML = 'Operation Pane';
-        document.getElementById("this-overlay").innerHTML = '';
-        $('#start').prop('disabled', false);
-    });
 });
